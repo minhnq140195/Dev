@@ -1,5 +1,0 @@
-# depslib dependency file v1.0
-1634223831 source:c:\dev\softengine\main.cpp
-	<iostream>
-	"SDL.h"
-
