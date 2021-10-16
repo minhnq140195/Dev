@@ -1,10 +1,26 @@
 #pragma once
 
-#include "Game.h"
+#include <string>
+#include "SDL.h"
+#include "SDL_image.h"
+#include <map>
 
-class TextureManager {
-
+class TextureManager
+{
 public:
-	static SDL_Texture* LoadTexture(const char* filename);
-	static void Draw(SDL_Texture* tex, SDL_Rect src, SDL_Rect dest);
+	static TextureManager* GetInstance()
+	{
+		return s_Instance = (s_Instance != nullptr) ? s_Instance : new TextureManager();
+	}
+
+	void Load(std::string id, std::string filename);
+	void Drop(std::string id);
+	void Clean();
+
+	void Draw(std::string id, int x, int y, int width, int height, SDL_RendererFlip flip = SDL_FLIP_NONE);
+
+private:
+	TextureManager() {}
+	static TextureManager* s_Instance;
+	std::map<std::string, SDL_Texture*> m_TextureMap;
 };
