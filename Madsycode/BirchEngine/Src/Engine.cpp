@@ -1,6 +1,7 @@
 #include "Engine.h"
-#include <iostream>
 #include "TextureManager.h"
+#include "Vector2D.h"
+#include "Transform.h"
 
 Engine* Engine::s_Instance = nullptr;
 
@@ -23,6 +24,13 @@ bool Engine::Init() {
 	}
 
 	TextureManager::GetInstance()->Load("tree", "assets/grass.png");
+
+	Vector2D v1(1, 1), v2;
+	v1.Log("V1: ");
+
+	Transform tf;
+	tf.Log();
+
 	return m_IsRunning = true;
 }
 void Engine::Clean() {
