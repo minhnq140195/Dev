@@ -1,9 +1,9 @@
 #include "Engine.h"
 #include "TextureManager.h"
-#include "Vector2D.h"
-#include "Transform.h"
+#include "Warrior.h"
 
 Engine* Engine::s_Instance = nullptr;
+Warrior* player = nullptr;
 
 bool Engine::Init() {
 
