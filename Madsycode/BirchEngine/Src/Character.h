@@ -6,7 +6,7 @@
 class Character : public GameObject
 {
 public:
-	Character(Properties props) : GameObject(props)
+	Character(Properties* props) : GameObject(props)
 	{
 
 	}

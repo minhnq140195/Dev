@@ -23,7 +23,8 @@ bool Engine::Init() {
 		return false;
 	}
 
-	TextureManager::GetInstance()->Load("tree", "assets/grass.png");
+	TextureManager::GetInstance()->Load("player", "assets/npc.png");
+	player = new Warrior(new Properties("player", 100, 200, 16, 32));
 
 	Vector2D v1(1, 1), v2;
 	v1.Log("V1: ");
@@ -47,14 +48,15 @@ void Engine::Quit() {
 }
 
 void Engine::Update() {
-
+	player->Update(0);
 }
 void Engine::Render() {
 
 	SDL_SetRenderDrawColor(m_Renderer, 124, 218, 254, 255);
 	SDL_RenderClear(m_Renderer);
 
-	TextureManager::GetInstance()->Draw("tree", 100, 100, 32, 32);
+	//TextureManager::GetInstance()->Draw("tree", 100, 100, 32, 32);
+	player->Draw();
 	SDL_RenderPresent(m_Renderer);
 }
 void Engine::Events() {
