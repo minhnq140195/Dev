@@ -1,0 +1,34 @@
+Hello, my name is Minh, I'm twenty six years old
+I work as a developer. I come from Ho Chi Minh City.
+I like to play soccer and badminton.
+I completed a Bachelor's Degree in UIT
+I have worked in Hitachi company for 3 years and Bosch company
+But after over 1 year working at Bosch, I realized I was not comfortable
+with that job. And decided to move a different company
+
+I saw an advertisement online. I clicked on it and it brought me
+to your company's website, where I applied for it
+
+
+Hello guys and welcome in this new video.
+Now we finally get to start our video series about building a game engine
+as I promised last month
+
+So this is a game engine series and this is the first video on it.
+In this first video we are going to be establishing some basics like.
+
+
+
+
+
+
+
+
+
+
+
+Hello guys and welcome in his second video of this game engine
+the idea is we want to have only one instance of the engine in our whole program.
+because we don't want anybody to create another instance of this class
+
+that's why I wanna make it's a little
